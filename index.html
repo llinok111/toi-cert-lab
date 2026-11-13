@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>toi-cert-lab — certified time-of-impact for moving triangles</title>
+<style>
+  body { margin: 0; background: #0d1117; color: #c9d1d9; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  #app { position: fixed; inset: 0; }
+  #hud { position: fixed; top: 12px; left: 12px; width: 380px; background: #161b22ee; border: 1px solid #30363d; border-radius: 8px; padding: 12px; }
+  h1 { font-size: 14px; margin: 0 0 8px; color: #f0f6fc; }
+  table { border-collapse: collapse; width: 100%; }
+  td { padding: 1px 4px; } td:first-child { color: #8b949e; }
+  .pass { color: #3fb950; } .fail { color: #f85149; }
+  input[type=range] { width: 100%; }
+  select { background: #0d1117; color: #c9d1d9; border: 1px solid #30363d; width: 100%; }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="app"></div>
+<div id="hud">
+  <h1>toi-cert-lab · certified TOI</h1>
+  <select id="pick"></select>
+  <div style="margin:6px 0 2px">time t = <b id="tval">0.000</b></div>
+  <input id="t" type="range" min="0" max="1" step="0.001" value="0" />
+  <table>
+    <tr><td>status</td><td id="status">—</td></tr>
+    <tr><td>lo (certified safe)</td><td id="lo">—</td></tr>
+    <tr><td>hi (contact by)</td><td id="hi">—</td></tr>
+    <tr><td>width</td><td id="w">—</td></tr>
+    <tr><td>iterations</td><td id="it">—</td></tr>
+    <tr><td>Lipschitz L</td><td id="lip">—</td></tr>
+    <tr><td>core digest</td><td id="dg">—</td></tr>
+  </table>
+  <div style="color:#8b949e;margin-top:6px">The numbers above are computed by <code>src/core.mjs</code> in this page — the same module <code>bench/verify.mjs</code> imports in node.</div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

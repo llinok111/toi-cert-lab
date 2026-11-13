@@ -1,0 +1,51 @@
+{
+  "tool": "toi-cert-lab",
+  "generatedAt": "2026-11-13T12:26:52.847Z",
+  "node": "v24.19.0",
+  "corpus": {
+    "cases": 310,
+    "hit": 150,
+    "miss": 150,
+    "touch": 10,
+    "staticPairs": 500
+  },
+  "timing": {
+    "reps": 7,
+    "coldStartMs": 92.516,
+    "samplesMs": [
+      21.481,
+      15.24,
+      15.817,
+      15.237,
+      21.709,
+      37.974,
+      25.104
+    ],
+    "minMs": 15.237,
+    "medianMs": 21.481,
+    "p95Ms": 37.974,
+    "stddevMs": 7.507,
+    "rsdPct": 34.45,
+    "perCaseMs": 0.0693
+  },
+  "correctness": {
+    "oracleGroundTruthHit": "150/150",
+    "missedCollisions": 0,
+    "inventedCollisions": 0,
+    "soundSamplesScanned": 300150,
+    "soundViolations": 0,
+    "bracketWidthMedian": 9.7755e-13,
+    "bracketWidest": 6.973e-12,
+    "oraclePairAgreement": "500/500",
+    "scaleMismatches": 0,
+    "scaleToiDrift": 3.85e-16,
+    "digest": "c23676a5"
+  },
+  "baseline": {
+    "kind": "fixed-step sampling dt=1/60 with the independent oracle predicate",
+    "dt": 0.016666666666666666,
+    "missedOf": "8/150",
+    "medianLateBy": 0.0082,
+    "totalMs": 336.376
+  }
+}
