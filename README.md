@@ -6,7 +6,7 @@ happened by it). On the shipped 310-case corpus: **0/150 missed collisions, 0/15
 bracket width 9.78e-13** versus the in-repo fixed-step baseline `baseline/naive.mjs` at **dt = 1/60 = 1.67e-2**,
 which **misses 8/150 collisions** and is median **8.2e-3 late** on the ones it does catch.
 
-`Upstream: none` — original work, no upstream project modified.
+Upstream: 原创（无上游）— original work, no upstream project modified.
 
 ## Run it (one command)
 
